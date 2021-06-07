@@ -1,0 +1,44 @@
+A51 MACRO ASSEMBLER  ASCIITOHEX                                                           01/05/2021 12:08:04 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\asciitohex.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE asciitohex.asm SET(SMALL) DEBUG PRINT(.\Listings\asciitohex.lst) OBJECT
+                      (.\Objects\asciitohex.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 00H
+0000 904200            2     MOV DPTR,#MYDATA
+0003 E4                3     CLR A
+0004 93                4     MOVC A,@A+DPTR
+0005 9430              5     SUBB A,#30H
+0007 5004              6     JNC L1
+0009 74EE              7     MOV A,#0EEH
+000B 8008              8     SJMP OVER
+000D B40A00            9     L1: CJNE A,#0AH,NEXT
+0010 4003             10     NEXT:JC OVER
+0012 C3               11     CLR C
+0013 9407             12     SUBB A,#07H
+0015 FB               13     OVER:MOV R3,A
+4200                  14     ORG 4200H
+4200 42               15     MYDATA: DB 42H
+                      16     END
+A51 MACRO ASSEMBLER  ASCIITOHEX                                                           01/05/2021 12:08:04 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+L1 . . . . . . . .  C ADDR   000DH   A   
+MYDATA . . . . . .  C ADDR   4200H   A   
+NEXT . . . . . . .  C ADDR   0010H   A   
+OVER . . . . . . .  C ADDR   0015H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

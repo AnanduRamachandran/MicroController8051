@@ -1,0 +1,47 @@
+A51 MACRO ASSEMBLER  LOWEST                                                               01/04/2021 16:33:00 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\lowest.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE lowest.asm SET(SMALL) DEBUG PRINT(.\Listings\lowest.lst) OBJECT(.\Objec
+                      ts\lowest.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000 7809              1     mov r0, #9
+0002 908200            2             mov dptr, #8200H
+0005 93                3             movc a, @a+dptr
+0006 F5F0              4             mov b, a
+0008 A3                5     back: inc dptr
+0009 E4                6             clr a
+000A 93                7             movc a, @a+dptr
+000B B5F000            8             cjne a,b, check
+000E 5002              9     check:  JNC next
+0010 F5F0             10                     mov b,a
+0012 D8F4             11     next: djnz r0,back
+0014 ACF0             12                mov r4, b
+                      13                     
+8200                  14     org 8200h
+8200 10225070         15             db 10h,22h,50h,70h,90h,11h,21h,53h,91h,76h
+8204 90112153                
+8208 9176                    
+                      16                     
+                      17     END
+A51 MACRO ASSEMBLER  LOWEST                                                               01/04/2021 16:33:00 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+BACK . . . . . . .  C ADDR   0008H   A   
+CHECK. . . . . . .  C ADDR   000EH   A   
+NEXT . . . . . . .  C ADDR   0012H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)

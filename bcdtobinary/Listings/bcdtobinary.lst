@@ -1,0 +1,44 @@
+A51 MACRO ASSEMBLER  BCDTOBINARY                                                          01/05/2021 12:14:36 PAGE     1
+
+
+MACRO ASSEMBLER A51 V8.2.7.0
+OBJECT MODULE PLACED IN .\Objects\bcdtobinary.obj
+ASSEMBLER INVOKED BY: C:\Keil_v5\C51\BIN\A51.EXE bcdtobinary.asm SET(SMALL) DEBUG PRINT(.\Listings\bcdtobinary.lst) OBJE
+                      CT(.\Objects\bcdtobinary.obj) EP
+
+LOC  OBJ            LINE     SOURCE
+
+0000                   1     ORG 00H
+0000 904200            2     MOV DPTR, #MYDATA
+0003 E4                3     CLR A
+0004 93                4     MOVC A,@A+DPTR
+0005 540F              5     ANL A,#0FH
+0007 FA                6     MOV R2,A
+0008 E4                7     CLR A
+0009 93                8     MOVC A,@A+DPTR
+000A C4                9     SWAP A
+000B 540F             10     ANL A,#0FH
+000D 75F010           11     MOV B,#10H
+0010 A4               12     MUL AB
+0011 8AF0             13     MOV B,R2
+0013 25F0             14     ADD A,B
+0015 FB               15     MOV R3,A
+4200                  16     ORG 4200H
+4200 449E             17     MYDATA: DW 10110110
+                      18     END
+A51 MACRO ASSEMBLER  BCDTOBINARY                                                          01/05/2021 12:14:36 PAGE     2
+
+SYMBOL TABLE LISTING
+------ ----- -------
+
+
+N A M E             T Y P E  V A L U E   ATTRIBUTES
+
+B. . . . . . . . .  D ADDR   00F0H   A   
+MYDATA . . . . . .  C ADDR   4200H   A   
+
+
+REGISTER BANK(S) USED: 0 
+
+
+ASSEMBLY COMPLETE.  0 WARNING(S), 0 ERROR(S)
