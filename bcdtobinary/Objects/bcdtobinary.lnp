@@ -1,3 +1,0 @@
-".\Objects\bcdtobinary.obj" 
-TO ".\Objects\bcdtobinary" 
-PRINT(".\Listings\bcdtobinary.m51")

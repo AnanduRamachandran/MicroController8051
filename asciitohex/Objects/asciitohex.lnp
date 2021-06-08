@@ -1,3 +1,0 @@
-".\Objects\asciitohex.obj" 
-TO ".\Objects\asciitohex" 
-PRINT(".\Listings\asciitohex.m51")

@@ -1,3 +1,0 @@
-".\Objects\multiplication.obj" 
-TO ".\Objects\multiplication" 
-PRINT(".\Listings\multiplication.m51")

@@ -1,3 +1,0 @@
-".\Objects\hextoascii.obj" 
-TO ".\Objects\hexttoascii" 
-PRINT(".\Listings\hexttoascii.m51")

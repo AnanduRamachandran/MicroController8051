@@ -1,3 +1,0 @@
-".\Objects\lowest.obj" 
-TO ".\Objects\lowest" 
-PRINT(".\Listings\lowest.m51")

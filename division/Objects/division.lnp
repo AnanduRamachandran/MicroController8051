@@ -1,3 +1,0 @@
-".\Objects\division.obj" 
-TO ".\Objects\division" 
-PRINT(".\Listings\division.m51")
